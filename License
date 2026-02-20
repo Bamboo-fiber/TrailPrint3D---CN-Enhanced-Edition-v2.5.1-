@@ -1,0 +1,44 @@
+# LICENSE - TrailPrint3D CN Enhanced Edition v2.6.1
+
+## Copyright
+Copyright (c) 2025 EmGi (Original Creator)
+Copyright (c) 2026 Bamboo-fiber (Localization & Enhancements)
+
+## Modification Notice
+This version is a modified fork of the original TrailPrint3D (v2.5) by EmGi. Key modifications:
+1. Full Chinese UI localization across all interface elements
+2. Added "Circle Shape" option to the Shape menu
+3. Implemented "Quick Draw / Paint Map" for rapid sketching and map painting
+4. Added customizable base size input (100mm default) with per-shape dimension control
+
+## License Terms
+This work is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)**.
+
+### Permissions
+- ✅ Share: Copy and redistribute the material in any medium or format
+- ✅ Adapt: Remix, transform, and build upon the material
+- ✅ NonCommercial Use: Use the material for non-commercial purposes only
+
+### Restrictions
+- ❌ Commercial Use: No commercial exploitation without written permission from the original authors
+- ❌ No Attribution Waiver: You must give appropriate credit to both EmGi (original creator) and Bamboo-fiber (modifier)
+- ❌ No Additional Restrictions: You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits
+
+### Attribution Requirements
+When using or distributing this work, you must:
+1. Credit "EmGi (Original TrailPrint3D v2.5)" and "Bamboo-fiber (CN Enhanced Edition v2.6.1)"
+2. Provide a link to this repository (replace with your actual repo URL):  
+   https://github.com/Bamboo-fiber/TrailPrint3D---CN-Enhanced-Edition-v2.6.1
+3. Indicate if changes were made to the original work
+
+### Full Legal Text
+See the full license text at: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+## Third-Party Attributions
+- Elevation data: Mapzen Terrain Tiles (© Mapzen, AWS Public Dataset Program)  
+  License: https://github.com/tilezen/joerd/blob/master/docs/attribution.md
+- Elevation data: OpenTopoData (SRTM and other datasets)
+- Elevation data: Open-Elevation (SRTM data © NASA)
+- Water data: © OpenStreetMap contributors
+- Terrain data: Mapzen (© OpenStreetMap contributors, NASA SRTM, USGS)
+- Map data: © OpenStreetMap contributors
