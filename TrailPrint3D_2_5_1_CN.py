@@ -5,13 +5,12 @@ Created on Tue Feb 17 01:38:53 2026
 TrailPrint3D - CN Enhanced Edition (v2.5.1)
 ==============================================================================
 
-Version 2.5.1(CN) - Added Circle Shape, Custom Base Size & Quick Draw
+Version 2.5.1(CN) - Added Circle Shape & Custom Base Size
 
 Changelog:
 - Full Localization: Complete Chinese language support added throughout the interface
 - New Shape: Added "Circle" option to the Shape menu
 - Customizable Dimensions: Added base size input with individual size control for each shape (default: 100mm)
-- Quick Draw: Added quick drawing functionality for rapid sketching and map painting
 
 ------------------------------------------------------------------------------
 Copyright (c) 2025 EmGi (Original Creator)
@@ -19,11 +18,11 @@ Copyright (c) 2026 Bamboo-fiber (Localization & Enhancements)
 
 MODIFICATION NOTICE / 修改声明:
 This version is a modified fork of the original TrailPrint3D (v2.5) by EmGi.
-Modifications made by Bamboo-fiber include: Full Chinese UI localization, addition 
-of the "Circle Shape", and the "Quick Draw" feature.
+Modifications made by Bamboo-fiber include: Full Chinese UI localization and addition 
+of the "Circle Shape".
 
 本版本基于 EmGi 的原版 (v2.5) 修改而来。
-修改内容包括：全量中文汉化、新增"圆形"底座、新增"快速绘制"功能。
+修改内容包括：全量中文汉化、新增"圆形"底座。
 ------------------------------------------------------------------------------
 
 This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 
@@ -6007,4 +6006,5 @@ def runGeneration(type):
 
 # 确保脚本可以直接运行或作为插件加载
 if __name__ == "__main__":
+
     register()
