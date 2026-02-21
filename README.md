@@ -1,4 +1,4 @@
-# 🏔️ TrailPrint3D v2.6.1 - CN Enhanced Edition
+# 🏔️ TrailPrint3D v2.5.1 - CN Enhanced Edition
 
 ## 🌟 Special Tribute to the Original Author
 
@@ -20,7 +20,7 @@ As a secondary developer (Bamboo-fiber), I have translated the entire UI into Ch
 
 ## 🚀 Installation
 
-1. Download the `TrailPrint3D_2_6_1.py` file.
+1. Download the `TrailPrint3D_2_5_1_CN.py` file.
 
 2. Open Blender, go to **Edit > Preferences > Add-ons**.
 
@@ -30,7 +30,7 @@ As a secondary developer (Bamboo-fiber), I have translated the entire UI into Ch
 
 5. You can find the add-on panel in the 3D Viewport's right sidebar (press `N`), under the **TrailPrint3D** tab.
 
-## ✨ What's New in v2.6.1 (Enhanced Edition)
+## ✨ What's New in v2.5.1 (Enhanced Edition)
 
 - **Full Chinese Localization:** The entire UI has been translated into Chinese for better accessibility for Chinese users.
 
@@ -94,7 +94,7 @@ All data used to generate terrain and maps comes from the following amazing open
 
 
 
-# 🏔️ TrailPrint3D (轨迹3D打印) v2.6.1 - 中文增强版
+# 🏔️ TrailPrint3D (轨迹3D打印) v2.5.1 - 中文增强版
 
 ## 🌟 特别致敬原作者
 
@@ -115,7 +115,7 @@ All data used to generate terrain and maps comes from the following amazing open
 
 ## 🚀 安装指南
 
-1. 下载 `TrailPrint3D_2_6_1.py` 脚本文件。
+1. 下载 `TrailPrint3D_2_5_1_CN.py` 脚本文件。
 
 2. 打开 Blender，进入 **编辑 (Edit) > 偏好设置 (Preferences) > 插件 (Add-ons)**。
 
@@ -125,7 +125,7 @@ All data used to generate terrain and maps comes from the following amazing open
 
 5. 在 3D 视图界面按 `N` 键调出侧边栏，在 **TrailPrint3D** 选项卡中即可使用。
 
-## ✨ 本汉化定制版新增功能 (v2.6.1)
+## ✨ 本汉化定制版新增功能 (v2.5.1)
 
 - **全量汉化支持:** 插件面板的全部参数、按钮与提示均已深度汉化，便于国内用户使用。
 
