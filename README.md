@@ -10,7 +10,7 @@ As a secondary developer (Bamboo-fiber), I have translated the entire UI into Ch
 
 ## 💻 System Requirements
 
-- **Blender Version:** >= 4.5.0 (Recommended: 4.5.2+)
+- **Blender Version:** >= 4.5.2
 
 - **Python Version:** >= 3.11 (Uses Blender's embedded Python environment)
 
@@ -99,7 +99,7 @@ All data used to generate terrain and maps comes from the following amazing open
 
 ## 💻 环境要求
 
-- **Blender 版本:** >= 4.5.0 (推荐: 4.5.2 及以上)
+- **Blender 版本:** >= 4.5.2
 
 - **Python 版本:** >= 3.11 (使用 Blender 内置的 Python 环境)
 
