@@ -4299,9 +4299,29 @@ def single_color_mode(crv, mapName):
 
 # --- OSM FETCHING ---
 
+# Public Overpass API mirrors, tried in order. Edit this list to put the one
+# that is reachable from your network first. From mainland China most of these
+# are blocked unless you go through a proxy — set OVERPASS_PROXY below instead.
+OVERPASS_MIRRORS = [
+    "https://overpass-api.de/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter",
+    "https://overpass.private.coffee/api/interpreter",
+    "https://overpass.osm.ch/api/interpreter",
+    "https://overpass.bbox.earth/api/interpreter",
+    "https://overpass.osm.jp/api/interpreter",
+    "https://overpass.openstreetmap.ru/api/interpreter",
+]
+
+# Optional HTTP(S) proxy for when the Overpass mirrors are unreachable from your
+# network. Example for Clash/v2ray on the default port:
+#   OVERPASS_PROXY = {"http": "http://127.0.0.1:7890", "https": "http://127.0.0.1:7890"}
+#   OVERPASS_PROXY = {"http": "socks5h://127.0.0.1:1080", "https": "socks5h://127.0.0.1:1080"}
+# Leave as None to connect directly.
+OVERPASS_PROXY = None
+
+
 def fetch_osm_data(bbox, kind = "WATER"):
     south, west, north, east = bbox
-    overpass_url = "http://overpass-api.de/api/interpreter"
     if kind == "WATER":
         query = f"""
         [out:json][timeout:25];
@@ -4366,25 +4386,33 @@ def fetch_osm_data(bbox, kind = "WATER"):
 
     '''
     #print(query)
-    for attempt in range(3):
-        try:
-            response = requests.post(overpass_url, data={'data': query})
+    for url in OVERPASS_MIRRORS:
+        for attempt in range(2):
+            try:
+                response = requests.post(
+                    url,
+                    data={'data': query},
+                    timeout=(10, 60),
+                    proxies=OVERPASS_PROXY,
+                    headers={'User-Agent': 'Blender-Trail-Generator/2.5.1'},
+                )
+                print(f"[{url}] Status: {response.status_code}")
+                if response.status_code == 200:
+                    return response
+                if response.status_code in (429, 504):
+                    print(f"Overpass busy (HTTP {response.status_code}), retrying... {attempt+1}/2")
+                    time.sleep(5)
+                    continue
+                print(f"HTTP {response.status_code}, trying next mirror...")
+                break
 
-            #check if response is valid
-            print("Status:", response.status_code)
-            if response.status_code != 200:
-                print("Content-Type:", response.headers.get("content-type"))
-                print("Response text preview:\n", response.text[:500])
-
-            #print(response.json())
-            if response.status_code == 504:
-                print(f"Timeout (504), retrying... {attempt+1}/3")
-            if response.status_code == 200:
-                return response
-            
-        except Exception as e:
-            print("Request failed:", e)
-            time.sleep(5)
+            except requests.exceptions.SSLError as e:
+                print(f"SSL error on {url}: {e}")
+                break
+            except Exception as e:
+                print(f"Request failed: {url}: {e}")
+                time.sleep(3)
+                break
 
     return None
  
